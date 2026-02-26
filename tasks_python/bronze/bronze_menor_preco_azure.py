@@ -5,10 +5,12 @@ import os
 import io
 from datetime import datetime
 from azure.storage.blob import BlobServiceClient 
-from env import string_azure
+from dotenv import load_dotenv  # Adicione isso
 
-# --- CONFIGURAÇÕES DA AZURE ---
-# AZURE_CONNECTION_STRING = string_azure
+# Carrega as variáveis do arquivo .env (se ele existir)
+load_dotenv() 
+
+# Agora o os.getenv vai funcionar tanto no seu PC quanto no GitHub
 AZURE_CONNECTION_STRING = os.getenv("AZURE_CONNECTION_STRING")
 AZURE_CONTAINER = "bronze" 
 
