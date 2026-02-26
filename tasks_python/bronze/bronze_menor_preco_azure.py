@@ -22,20 +22,20 @@ API_URL = "https://menorpreco.notaparana.pr.gov.br/api/v1/produtos"
 
 def testar_conexao_azure():
     """Testa se a credencial é válida e se o container existe antes de rodar a extração."""
-    print("☁️  Testando conexão com a Azure Blob Storage...")
+    print("☁️  Testando conexão com a Azure Blob Storage...", flush=True)
     try:
         blob_service_client = BlobServiceClient.from_connection_string(AZURE_CONNECTION_STRING)
         container_client = blob_service_client.get_container_client(AZURE_CONTAINER)
         
         if not container_client.exists():
-            print(f"❌ Erro Crítico: O container '{AZURE_CONTAINER}' NÃO FOI ENCONTRADO na sua Storage Account.")
-            print("Crie o container na Azure antes de rodar o script.")
+            print(f"❌ Erro Crítico: O container '{AZURE_CONTAINER}' NÃO FOI ENCONTRADO na sua Storage Account.", flush=True)
+            print("Crie o container na Azure antes de rodar o script.", flush=True)
             return False
             
-        print("✅ Conexão com a Azure estabelecida com sucesso! Container validado.\n")
+        print("✅ Conexão com a Azure estabelecida com sucesso! Container validado.\n", flush=True)
         return True
     except Exception as e:
-        print(f"❌ Erro de Autenticação na Azure: {e}")
+        print(f"❌ Erro de Autenticação na Azure: {e}", flush=True)
         return False
 
 def gerar_variacoes(categoria, termo):
@@ -68,8 +68,8 @@ def gerar_variacoes(categoria, termo):
     return variacoes
 
 def main():
-    print("🚀 Iniciando Pipeline Bronze (Destino: AZURE CLOUD)")
-    print("=" * 50)
+    print("🚀 Iniciando Pipeline Bronze (Destino: AZURE CLOUD)", flush=True)
+    print("=" * 50, flush=True)
     
     # 0. Teste de Conexão Fail-Fast
     if not testar_conexao_azure():
@@ -85,7 +85,7 @@ def main():
     df_polos = df_geos.filter(pl.col("nome").is_in(cidades_principais))
     
     if df_polos.height == 0:
-        print("❌ Erro nas cidades principais.")
+        print("❌ Erro nas cidades principais.", flush=True)
         return
 
     lista_polos = df_polos.select(["nome", "geohash"]).to_dicts()
@@ -96,8 +96,8 @@ def main():
         cidade_nome = polo["nome"]
         geohash = polo["geohash"]
         
-        print(f"\n🏙️ Região: {cidade_nome} (Geohash: {geohash})")
-        print("=" * 40)
+        print(f"\n🏙️ Região: {cidade_nome} (Geohash: {geohash})", flush=True)
+        print("=" * 40, flush=True)
         
         for i, linha in enumerate(linhas_referencia, 1):
             categoria = linha.get("categoria", "Geral")
@@ -105,7 +105,7 @@ def main():
             variacoes = gerar_variacoes(categoria, termo_base)
             total_notas_base = 0
             
-            print(f"🔍 [{i}/{total_termos}] {termo_base}...", end=" ")
+            print(f"🔍 [{i}/{total_termos}] {termo_base}...", end=" ", flush=True)
             
             for busca in variacoes:
                 offset = 0
@@ -133,14 +133,14 @@ def main():
                         else: break
                     except: break
             
-            print(f"✅ {total_notas_base} notas")
+            print(f"✅ {total_notas_base} notas", flush=True)
 
     if not todas_as_notas:
-        print("\n⚠️ Nada coletado.")
+        print("\n⚠️ Nada coletado.", flush=True)
         return
 
     # 3. Processamento
-    print("\n🛠️ Processando e deduplicando...")
+    print("\n🛠️ Processando e deduplicando...", flush=True)
     df = pl.from_dicts(todas_as_notas)
     if "estabelecimento" in df.columns:
         df = df.unnest("estabelecimento")
@@ -158,17 +158,17 @@ def main():
     agora = datetime.now()
     caminho_blob = f"menor_preco/ano_hive={agora.year}/mes_hive={agora.month:02d}/dados_{agora.strftime('%H%M%S')}.parquet"
     
-    print("\n📤 Iniciando upload para a Azure Blob Storage...")
+    print("\n📤 Iniciando upload para a Azure Blob Storage...", flush=True)
     try:
         blob_service_client = BlobServiceClient.from_connection_string(AZURE_CONNECTION_STRING)
         blob_client = blob_service_client.get_blob_client(container=AZURE_CONTAINER, blob=caminho_blob)
         
         blob_client.upload_blob(buffer.getvalue(), overwrite=True)
         
-        print(f"📦 Sucesso absoluto! Parquet salvo na nuvem:")
-        print(f"   URL Lógica: azure://{AZURE_CONTAINER}/{caminho_blob}")
+        print(f"📦 Sucesso absoluto! Parquet salvo na nuvem:", flush=True)
+        print(f"   URL Lógica: azure://{AZURE_CONTAINER}/{caminho_blob}", flush=True)
     except Exception as e:
-        print(f"❌ Erro fatal no momento do upload: {e}")
+        print(f"❌ Erro fatal no momento do upload: {e}", flush=True)
 
 if __name__ == "__main__":
     main()

@@ -28,4 +28,5 @@ jobs:
         # Injeta a senha segura como variável de ambiente apenas durante a execução
         env:
           AZURE_CONNECTION_STRING: ${{ secrets.AZURE_CONNECTION_STRING }}
+          PYTHONUNBUFFERED: "1" # Isso aqui força o log em tempo real
         run: python tasks_python/bronze/bronze_menor_preco_azure.py
