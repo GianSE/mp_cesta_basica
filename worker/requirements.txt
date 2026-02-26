@@ -1,0 +1,6 @@
+polars
+requests
+azure-storage-blob
+pyarrow
+fastparquet
+pygeohash

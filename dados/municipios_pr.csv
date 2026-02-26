@@ -1,0 +1,400 @@
+codigo_ibge,nome,latitude,longitude,capital,codigo_uf,siafi_id,ddd,fuso_horario
+4100103,Abatiá,-23.3049,-50.3133,0,41,7401,43,America/Sao_Paulo
+4100202,Adrianópolis,-24.6606,-48.9922,0,41,7403,41,America/Sao_Paulo
+4100301,Agudos do Sul,-25.9899,-49.3343,0,41,7405,41,America/Sao_Paulo
+4100400,Almirante Tamandaré,-25.3188,-49.3037,0,41,7407,41,America/Sao_Paulo
+4100459,Altamira do Paraná,-24.7983,-52.7128,0,41,8455,44,America/Sao_Paulo
+4128625,Alto Paraíso,-26.1146,-52.7469,0,41,5523,44,America/Sao_Paulo
+4100608,Alto Paraná,-23.1312,-52.3189,0,41,7409,44,America/Sao_Paulo
+4100707,Alto Piquiri,-24.0224,-53.44,0,41,7411,44,America/Sao_Paulo
+4100509,Altônia,-23.8759,-53.8958,0,41,7951,44,America/Sao_Paulo
+4100806,Alvorada do Sul,-22.7813,-51.2297,0,41,7413,43,America/Sao_Paulo
+4100905,Amaporã,-23.0943,-52.7866,0,41,7415,44,America/Sao_Paulo
+4101002,Ampére,-25.9168,-53.4686,0,41,7417,46,America/Sao_Paulo
+4101051,Anahy,-24.6449,-53.1332,0,41,5463,45,America/Sao_Paulo
+4101101,Andirá,-23.0533,-50.2304,0,41,7419,43,America/Sao_Paulo
+4101150,Ângulo,-23.1946,-51.9154,0,41,5509,44,America/Sao_Paulo
+4101200,Antonina,-25.4386,-48.7191,0,41,7421,41,America/Sao_Paulo
+4101309,Antônio Olinto,-25.9804,-50.1972,0,41,7423,42,America/Sao_Paulo
+4101408,Apucarana,-23.55,-51.4635,0,41,7425,43,America/Sao_Paulo
+4101507,Arapongas,-23.4153,-51.4259,0,41,7427,43,America/Sao_Paulo
+4101606,Arapoti,-24.1548,-49.8285,0,41,7429,43,America/Sao_Paulo
+4101655,Arapuã,-24.3132,-51.7856,0,41,830,43,America/Sao_Paulo
+4101705,Araruna,-23.9315,-52.5021,0,41,7431,44,America/Sao_Paulo
+4101804,Araucária,-25.5859,-49.4047,0,41,7435,41,America/Sao_Paulo
+4101853,Ariranha do Ivaí,-24.3857,-51.5839,0,41,832,43,America/Sao_Paulo
+4101903,Assaí,-23.3697,-50.8459,0,41,7437,43,America/Sao_Paulo
+4102000,Assis Chateaubriand,-24.4168,-53.5213,0,41,7953,44,America/Sao_Paulo
+4102109,Astorga,-23.2318,-51.6668,0,41,7439,44,America/Sao_Paulo
+4102208,Atalaia,-23.1517,-52.0551,0,41,7441,44,America/Sao_Paulo
+4102307,Balsa Nova,-25.5804,-49.6291,0,41,7443,41,America/Sao_Paulo
+4102406,Bandeirantes,-23.1078,-50.3704,0,41,7445,43,America/Sao_Paulo
+4102505,Barbosa Ferraz,-24.0334,-52.004,0,41,7447,44,America/Sao_Paulo
+4102703,Barra do Jacaré,-23.116,-50.1842,0,41,7451,43,America/Sao_Paulo
+4102604,Barracão,-26.2502,-53.6324,0,41,7449,49,America/Sao_Paulo
+4102752,Bela Vista da Caroba,-25.8842,-53.6725,0,41,834,46,America/Sao_Paulo
+4102802,Bela Vista do Paraíso,-22.9937,-51.1927,0,41,7453,43,America/Sao_Paulo
+4102901,Bituruna,-26.1607,-51.5518,0,41,7455,42,America/Sao_Paulo
+4103008,Boa Esperança,-24.2467,-52.7876,0,41,7457,44,America/Sao_Paulo
+4103024,Boa Esperança do Iguaçu,-25.6324,-53.2108,0,41,5471,46,America/Sao_Paulo
+4103040,Boa Ventura de São Roque,-24.8688,-51.6276,0,41,836,42,America/Sao_Paulo
+4103057,Boa Vista da Aparecida,-25.4308,-53.4117,0,41,7981,45,America/Sao_Paulo
+4103107,Bocaiúva do Sul,-25.2066,-49.1141,0,41,7459,41,America/Sao_Paulo
+4103156,Bom Jesus do Sul,-26.1958,-53.5955,0,41,838,46,America/Sao_Paulo
+4103206,Bom Sucesso,-23.7063,-51.7671,0,41,7461,43,America/Sao_Paulo
+4103222,Bom Sucesso do Sul,-26.0731,-52.8353,0,41,9979,46,America/Sao_Paulo
+4103305,Borrazópolis,-23.9366,-51.5875,0,41,7463,43,America/Sao_Paulo
+4103354,Braganey,-24.8173,-53.1218,0,41,7983,45,America/Sao_Paulo
+4103370,Brasilândia do Sul,-24.1978,-53.5275,0,41,5521,44,America/Sao_Paulo
+4103404,Cafeara,-22.789,-51.7142,0,41,7465,43,America/Sao_Paulo
+4103453,Cafelândia,-24.6189,-53.3207,0,41,7985,45,America/Sao_Paulo
+4103479,Cafezal do Sul,-23.9005,-53.5124,0,41,5491,44,America/Sao_Paulo
+4103503,Califórnia,-23.6566,-51.3574,0,41,7467,43,America/Sao_Paulo
+4103602,Cambará,-23.0423,-50.0753,0,41,7469,43,America/Sao_Paulo
+4103701,Cambé,-23.2766,-51.2798,0,41,7471,43,America/Sao_Paulo
+4103800,Cambira,-23.589,-51.5792,0,41,7473,43,America/Sao_Paulo
+4103909,Campina da Lagoa,-24.5893,-52.7976,0,41,7475,44,America/Sao_Paulo
+4103958,Campina do Simão,-25.0802,-51.8237,0,41,840,42,America/Sao_Paulo
+4104006,Campina Grande do Sul,-25.3044,-49.0551,0,41,7477,41,America/Sao_Paulo
+4104055,Campo Bonito,-25.0294,-52.9939,0,41,8475,45,America/Sao_Paulo
+4104105,Campo do Tenente,-25.98,-49.6844,0,41,7479,41,America/Sao_Paulo
+4104204,Campo Largo,-25.4525,-49.529,0,41,7481,41,America/Sao_Paulo
+4104253,Campo Magro,-25.3687,-49.4501,0,41,842,41,America/Sao_Paulo
+4104303,Campo Mourão,-24.0463,-52.378,0,41,7483,44,America/Sao_Paulo
+4104402,Cândido de Abreu,-24.5649,-51.3372,0,41,7485,43,America/Sao_Paulo
+4104428,Candói,-25.5758,-52.0409,0,41,5499,42,America/Sao_Paulo
+4104451,Cantagalo,-25.3734,-52.1198,0,41,8451,42,America/Sao_Paulo
+4104501,Capanema,-25.6691,-53.8055,0,41,7487,46,America/Sao_Paulo
+4104600,Capitão Leônidas Marques,-25.4816,-53.6112,0,41,7489,45,America/Sao_Paulo
+4104659,Carambeí,-24.9152,-50.0986,0,41,844,42,America/Sao_Paulo
+4104709,Carlópolis,-23.4269,-49.7235,0,41,7491,43,America/Sao_Paulo
+4104808,Cascavel,-24.9573,-53.459,0,41,7493,45,America/Sao_Paulo
+4104907,Castro,-24.7891,-50.0108,0,41,7495,42,America/Sao_Paulo
+4105003,Catanduvas,-25.2044,-53.1548,0,41,7497,45,America/Sao_Paulo
+4105102,Centenário do Sul,-22.8188,-51.5973,0,41,7499,43,America/Sao_Paulo
+4105201,Cerro Azul,-26.0891,-52.8691,0,41,7501,41,America/Sao_Paulo
+4105300,Céu Azul,-25.1489,-53.8415,0,41,7957,45,America/Sao_Paulo
+4105409,Chopinzinho,-25.8515,-52.5173,0,41,7503,46,America/Sao_Paulo
+4105508,Cianorte,-23.6599,-52.6054,0,41,7505,44,America/Sao_Paulo
+4105607,Cidade Gaúcha,-23.3772,-52.9436,0,41,7507,44,America/Sao_Paulo
+4105706,Clevelândia,-26.4043,-52.3508,0,41,7509,46,America/Sao_Paulo
+4105805,Colombo,-25.2925,-49.2262,0,41,7513,41,America/Sao_Paulo
+4105904,Colorado,-22.8374,-51.9743,0,41,7515,44,America/Sao_Paulo
+4106001,Congonhinhas,-23.5493,-50.5569,0,41,7517,43,America/Sao_Paulo
+4106100,Conselheiro Mairinck,-23.623,-50.1707,0,41,7519,43,America/Sao_Paulo
+4106209,Contenda,-25.6788,-49.535,0,41,7521,41,America/Sao_Paulo
+4106308,Corbélia,-24.7971,-53.3006,0,41,7523,45,America/Sao_Paulo
+4106407,Cornélio Procópio,-23.1829,-50.6498,0,41,7525,43,America/Sao_Paulo
+4106456,Coronel Domingos Soares,-26.2277,-52.0356,0,41,846,46,America/Sao_Paulo
+4106506,Coronel Vivida,-25.9767,-52.5641,0,41,7527,46,America/Sao_Paulo
+4106555,Corumbataí do Sul,-24.101,-52.1177,0,41,8479,44,America/Sao_Paulo
+4106803,Cruz Machado,-26.0166,-51.343,0,41,7533,42,America/Sao_Paulo
+4106571,Cruzeiro do Iguaçu,-25.6192,-53.1285,0,41,5473,46,America/Sao_Paulo
+4106605,Cruzeiro do Oeste,-23.7799,-53.0774,0,41,7529,44,America/Sao_Paulo
+4106704,Cruzeiro do Sul,-22.9624,-52.1622,0,41,7531,44,America/Sao_Paulo
+4106852,Cruzmaltina,-24.0132,-51.4563,0,41,848,43,America/Sao_Paulo
+4106902,Curitiba,-25.4195,-49.2646,1,41,7535,41,America/Sao_Paulo
+4107009,Curiúva,-24.0362,-50.4576,0,41,7537,43,America/Sao_Paulo
+4107157,Diamante D'Oeste,-24.9419,-54.1052,0,41,9915,45,America/Sao_Paulo
+4107108,Diamante do Norte,-22.655,-52.8617,0,41,7539,44,America/Sao_Paulo
+4107124,Diamante do Sul,-25.035,-52.6768,0,41,5465,45,America/Sao_Paulo
+4107207,Dois Vizinhos,-25.7407,-53.057,0,41,7541,46,America/Sao_Paulo
+4107256,Douradina,-23.3807,-53.2918,0,41,8465,44,America/Sao_Paulo
+4107306,Doutor Camargo,-23.5582,-52.2178,0,41,7543,44,America/Sao_Paulo
+4128633,Doutor Ulysses,-24.5665,-49.4219,0,41,5449,41,America/Sao_Paulo
+4107405,Enéas Marques,-25.9445,-53.1659,0,41,7545,46,America/Sao_Paulo
+4107504,Engenheiro Beltrão,-23.797,-52.2659,0,41,7547,44,America/Sao_Paulo
+4107538,Entre Rios do Oeste,-24.7042,-54.2385,0,41,5529,45,America/Sao_Paulo
+4107520,Esperança Nova,-23.7238,-53.811,0,41,850,44,America/Sao_Paulo
+4107546,Espigão Alto do Iguaçu,-25.4216,-52.8348,0,41,852,46,America/Sao_Paulo
+4107553,Farol,-24.0958,-52.6217,0,41,5511,44,America/Sao_Paulo
+4107603,Faxinal,-24.0077,-51.3227,0,41,7549,43,America/Sao_Paulo
+4107652,Fazenda Rio Grande,-25.6624,-49.3073,0,41,9983,41,America/Sao_Paulo
+4107702,Fênix,-23.9135,-51.9805,0,41,7551,44,America/Sao_Paulo
+4107736,Fernandes Pinheiro,-25.4107,-50.5456,0,41,854,42,America/Sao_Paulo
+4107751,Figueira,-23.8455,-50.4031,0,41,8457,43,America/Sao_Paulo
+4107850,Flor da Serra do Sul,-26.2523,-53.3092,0,41,5475,46,America/Sao_Paulo
+4107801,Floraí,-23.3178,-52.3029,0,41,7553,44,America/Sao_Paulo
+4107900,Floresta,-23.6031,-52.0807,0,41,7555,44,America/Sao_Paulo
+4108007,Florestópolis,-22.8623,-51.3882,0,41,7557,43,America/Sao_Paulo
+4108106,Flórida,-23.0847,-51.9546,0,41,7559,44,America/Sao_Paulo
+4108205,Formosa do Oeste,-24.2951,-53.3114,0,41,7561,44,America/Sao_Paulo
+4108304,Foz do Iguaçu,-25.5427,-54.5827,0,41,7563,45,America/Sao_Paulo
+4108452,Foz do Jordão,-25.7371,-52.1188,0,41,856,42,America/Sao_Paulo
+4108320,Francisco Alves,-24.0667,-53.8461,0,41,7977,44,America/Sao_Paulo
+4108403,Francisco Beltrão,-26.0817,-53.0535,0,41,7565,46,America/Sao_Paulo
+4108502,General Carneiro,-26.425,-51.3172,0,41,7567,42,America/Sao_Paulo
+4108551,Godoy Moreira,-24.173,-51.9246,0,41,9947,43,America/Sao_Paulo
+4108601,Goioerê,-24.1835,-53.0248,0,41,7569,44,America/Sao_Paulo
+4108650,Goioxim,-25.1927,-51.9911,0,41,858,42,America/Sao_Paulo
+4108700,Grandes Rios,-24.1466,-51.5094,0,41,7959,43,America/Sao_Paulo
+4108809,Guaíra,-24.085,-54.2573,0,41,7571,44,America/Sao_Paulo
+4108908,Guairaçá,-22.932,-52.6906,0,41,7573,44,America/Sao_Paulo
+4108957,Guamiranga,-25.1912,-50.8021,0,41,860,42,America/Sao_Paulo
+4109005,Guapirama,-23.5203,-50.0407,0,41,7575,43,America/Sao_Paulo
+4109104,Guaporema,-23.3402,-52.7786,0,41,7577,44,America/Sao_Paulo
+4109203,Guaraci,-22.9694,-51.6504,0,41,7579,43,America/Sao_Paulo
+4109302,Guaraniaçu,-25.0968,-52.8755,0,41,7581,45,America/Sao_Paulo
+4109401,Guarapuava,-25.3902,-51.4623,0,41,7583,42,America/Sao_Paulo
+4109500,Guaraqueçaba,-25.3071,-48.3204,0,41,7585,41,America/Sao_Paulo
+4109609,Guaratuba,-25.8817,-48.5752,0,41,7587,41,America/Sao_Paulo
+4109658,Honório Serpa,-26.139,-52.3848,0,41,9981,46,America/Sao_Paulo
+4109708,Ibaiti,-23.8478,-50.1932,0,41,7589,43,America/Sao_Paulo
+4109757,Ibema,-25.1193,-53.0072,0,41,9949,45,America/Sao_Paulo
+4109807,Ibiporã,-23.2659,-51.0522,0,41,7591,43,America/Sao_Paulo
+4109906,Icaraíma,-23.3944,-53.615,0,41,7593,44,America/Sao_Paulo
+4110003,Iguaraçu,-23.1949,-51.8256,0,41,7595,44,America/Sao_Paulo
+4110052,Iguatu,-24.7153,-53.0827,0,41,5467,45,America/Sao_Paulo
+4110078,Imbaú,-24.448,-50.7533,0,41,862,42,America/Sao_Paulo
+4110102,Imbituva,-25.2285,-50.5989,0,41,7597,42,America/Sao_Paulo
+4110201,Inácio Martins,-25.5704,-51.0769,0,41,7599,42,America/Sao_Paulo
+4110300,Inajá,-22.7509,-52.1995,0,41,7601,44,America/Sao_Paulo
+4110409,Indianópolis,-23.4762,-52.6989,0,41,7961,44,America/Sao_Paulo
+4110508,Ipiranga,-25.0238,-50.5794,0,41,7603,42,America/Sao_Paulo
+4110607,Iporã,-24.0083,-53.706,0,41,7605,44,America/Sao_Paulo
+4110656,Iracema do Oeste,-24.4262,-53.3528,0,41,5485,44,America/Sao_Paulo
+4110706,Irati,-25.4697,-50.6493,0,41,7607,42,America/Sao_Paulo
+4110805,Iretama,-24.4253,-52.1012,0,41,7609,44,America/Sao_Paulo
+4110904,Itaguajé,-22.6183,-51.9674,0,41,7611,44,America/Sao_Paulo
+4110953,Itaipulândia,-25.1366,-54.3001,0,41,5525,45,America/Sao_Paulo
+4111001,Itambaracá,-23.0181,-50.4097,0,41,7613,43,America/Sao_Paulo
+4111100,Itambé,-23.6601,-51.9912,0,41,7615,44,America/Sao_Paulo
+4111209,Itapejara d'Oeste,-25.9619,-52.8152,0,41,7617,46,America/Sao_Paulo
+4111258,Itaperuçu,-25.2193,-49.3454,0,41,5451,41,America/Sao_Paulo
+4111308,Itaúna do Sul,-22.7289,-52.8874,0,41,7619,44,America/Sao_Paulo
+4111407,Ivaí,-25.0067,-50.857,0,41,7621,42,America/Sao_Paulo
+4111506,Ivaiporã,-24.2485,-51.6754,0,41,7623,43,America/Sao_Paulo
+4111555,Ivaté,-23.4072,-53.3687,0,41,9955,44,America/Sao_Paulo
+4111605,Ivatuba,-23.6187,-52.2203,0,41,7625,44,America/Sao_Paulo
+4111704,Jaboti,-23.7435,-50.0729,0,41,7627,43,America/Sao_Paulo
+4111803,Jacarezinho,-23.1591,-49.9739,0,41,7629,43,America/Sao_Paulo
+4111902,Jaguapitã,-23.1104,-51.5342,0,41,7631,43,America/Sao_Paulo
+4112009,Jaguariaíva,-24.2439,-49.7066,0,41,7633,43,America/Sao_Paulo
+4112108,Jandaia do Sul,-23.6011,-51.6448,0,41,7635,43,America/Sao_Paulo
+4112207,Janiópolis,-24.1401,-52.7784,0,41,7637,44,America/Sao_Paulo
+4112306,Japira,-23.8142,-50.1422,0,41,7639,43,America/Sao_Paulo
+4112405,Japurá,-23.4693,-52.5557,0,41,7641,44,America/Sao_Paulo
+4112504,Jardim Alegre,-24.1809,-51.6902,0,41,7643,43,America/Sao_Paulo
+4112603,Jardim Olinda,-22.5523,-52.0503,0,41,7645,44,America/Sao_Paulo
+4112702,Jataizinho,-23.2578,-50.9777,0,41,7647,43,America/Sao_Paulo
+4112751,Jesuítas,-24.3839,-53.3849,0,41,7997,44,America/Sao_Paulo
+4112801,Joaquim Távora,-23.4987,-49.909,0,41,7649,43,America/Sao_Paulo
+4112900,Jundiaí do Sul,-23.4357,-50.2496,0,41,7651,43,America/Sao_Paulo
+4112959,Juranda,-24.4209,-52.8413,0,41,8463,44,America/Sao_Paulo
+4113007,Jussara,-23.6219,-52.4693,0,41,7653,44,America/Sao_Paulo
+4113106,Kaloré,-23.8188,-51.6687,0,41,7655,43,America/Sao_Paulo
+4113205,Lapa,-25.7671,-49.7168,0,41,7657,41,America/Sao_Paulo
+4113254,Laranjal,-24.8862,-52.47,0,41,5501,42,America/Sao_Paulo
+4113304,Laranjeiras do Sul,-25.4077,-52.4109,0,41,7659,42,America/Sao_Paulo
+4113403,Leópolis,-23.0818,-50.7511,0,41,7661,43,America/Sao_Paulo
+4113429,Lidianópolis,-24.11,-51.6506,0,41,5507,43,America/Sao_Paulo
+4113452,Lindoeste,-25.2596,-53.5733,0,41,9959,45,America/Sao_Paulo
+4113502,Loanda,-22.9232,-53.1362,0,41,7663,44,America/Sao_Paulo
+4113601,Lobato,-23.0058,-51.9524,0,41,7665,44,America/Sao_Paulo
+4113700,Londrina,-23.304,-51.1691,0,41,7667,43,America/Sao_Paulo
+4113734,Luiziana,-24.2853,-52.269,0,41,8481,44,America/Sao_Paulo
+4113759,Lunardelli,-24.0821,-51.7368,0,41,8459,43,America/Sao_Paulo
+4113809,Lupionópolis,-22.755,-51.6601,0,41,7669,43,America/Sao_Paulo
+4113908,Mallet,-25.8806,-50.8173,0,41,7671,42,America/Sao_Paulo
+4114005,Mamborê,-24.317,-52.5271,0,41,7673,44,America/Sao_Paulo
+4114104,Mandaguaçu,-23.3458,-52.0944,0,41,7675,44,America/Sao_Paulo
+4114203,Mandaguari,-23.5446,-51.671,0,41,7677,44,America/Sao_Paulo
+4114302,Mandirituba,-25.777,-49.3282,0,41,7679,41,America/Sao_Paulo
+4114351,Manfrinópolis,-26.1441,-53.3113,0,41,864,46,America/Sao_Paulo
+4114401,Mangueirinha,-25.9421,-52.1743,0,41,7511,46,America/Sao_Paulo
+4114500,Manoel Ribas,-24.5144,-51.6658,0,41,7681,43,America/Sao_Paulo
+4114609,Marechal Cândido Rondon,-24.557,-54.0571,0,41,7683,45,America/Sao_Paulo
+4114708,Maria Helena,-23.6158,-53.2053,0,41,7685,44,America/Sao_Paulo
+4114807,Marialva,-23.4843,-51.7928,0,41,7687,44,America/Sao_Paulo
+4114906,Marilândia do Sul,-23.7425,-51.3137,0,41,7433,43,America/Sao_Paulo
+4115002,Marilena,-22.7336,-53.0402,0,41,7975,44,America/Sao_Paulo
+4115101,Mariluz,-24.0089,-53.1432,0,41,7689,44,America/Sao_Paulo
+4115200,Maringá,-23.4205,-51.9333,0,41,7691,44,America/Sao_Paulo
+4115309,Mariópolis,-26.355,-52.5532,0,41,7693,46,America/Sao_Paulo
+4115358,Maripá,-24.42,-53.8286,0,41,5487,44,America/Sao_Paulo
+4115408,Marmeleiro,-26.1472,-53.0267,0,41,7695,46,America/Sao_Paulo
+4115457,Marquinho,-25.112,-52.2497,0,41,866,42,America/Sao_Paulo
+4115507,Marumbi,-23.7058,-51.6404,0,41,7697,43,America/Sao_Paulo
+4115606,Matelândia,-25.2496,-53.9935,0,41,7699,45,America/Sao_Paulo
+4115705,Matinhos,-25.8237,-48.549,0,41,7963,41,America/Sao_Paulo
+4115739,Mato Rico,-24.6995,-52.1454,0,41,5503,42,America/Sao_Paulo
+4115754,Mauá da Serra,-23.8988,-51.2277,0,41,5459,43,America/Sao_Paulo
+4115804,Medianeira,-25.2977,-54.0943,0,41,7701,45,America/Sao_Paulo
+4115853,Mercedes,-24.4538,-54.1618,0,41,5531,45,America/Sao_Paulo
+4115903,Mirador,-23.255,-52.7761,0,41,7703,44,America/Sao_Paulo
+4116000,Miraselva,-22.9657,-51.4846,0,41,7705,43,America/Sao_Paulo
+4116059,Missal,-25.0919,-54.2477,0,41,8469,45,America/Sao_Paulo
+4116109,Moreira Sales,-24.0509,-53.0102,0,41,7707,44,America/Sao_Paulo
+4116208,Morretes,-25.4744,-48.8345,0,41,7709,41,America/Sao_Paulo
+4116307,Munhoz de Melo,-23.1487,-51.7737,0,41,7711,44,America/Sao_Paulo
+4116406,Nossa Senhora das Graças,-22.9129,-51.7978,0,41,7713,44,America/Sao_Paulo
+4116505,Nova Aliança do Ivaí,-23.1763,-52.6032,0,41,7715,44,America/Sao_Paulo
+4116604,Nova América da Colina,-23.3308,-50.7168,0,41,7717,43,America/Sao_Paulo
+4116703,Nova Aurora,-24.5289,-53.2575,0,41,7965,45,America/Sao_Paulo
+4116802,Nova Cantu,-24.6723,-52.5661,0,41,7719,44,America/Sao_Paulo
+4116901,Nova Esperança,-23.182,-52.2031,0,41,7721,44,America/Sao_Paulo
+4116950,Nova Esperança do Sudoeste,-25.9004,-53.2618,0,41,5477,46,America/Sao_Paulo
+4117008,Nova Fátima,-23.4324,-50.5665,0,41,7723,43,America/Sao_Paulo
+4117057,Nova Laranjeiras,-25.3054,-52.5447,0,41,5479,42,America/Sao_Paulo
+4117107,Nova Londrina,-22.7639,-52.9868,0,41,7725,44,America/Sao_Paulo
+4117206,Nova Olímpia,-23.4703,-53.0898,0,41,7967,44,America/Sao_Paulo
+4117255,Nova Prata do Iguaçu,-25.6309,-53.3469,0,41,7995,46,America/Sao_Paulo
+4117214,Nova Santa Bárbara,-23.5865,-50.7598,0,41,5457,43,America/Sao_Paulo
+4117222,Nova Santa Rosa,-24.4693,-53.9552,0,41,7979,45,America/Sao_Paulo
+4117271,Nova Tebas,-24.438,-51.9454,0,41,9913,42,America/Sao_Paulo
+4117297,Novo Itacolomi,-23.7631,-51.5079,0,41,5517,43,America/Sao_Paulo
+4117305,Ortigueira,-24.2058,-50.9185,0,41,7727,42,America/Sao_Paulo
+4117404,Ourizona,-23.4053,-52.1964,0,41,7729,44,America/Sao_Paulo
+4117453,Ouro Verde do Oeste,-24.7933,-53.9043,0,41,9965,45,America/Sao_Paulo
+4117503,Paiçandu,-23.4555,-52.046,0,41,7731,44,America/Sao_Paulo
+4117602,Palmas,-26.4839,-51.9888,0,41,7733,46,America/Sao_Paulo
+4117701,Palmeira,-25.4257,-50.007,0,41,7735,42,America/Sao_Paulo
+4117800,Palmital,-24.8853,-52.2029,0,41,7737,42,America/Sao_Paulo
+4117909,Palotina,-24.2868,-53.8404,0,41,7739,44,America/Sao_Paulo
+4118006,Paraíso do Norte,-23.2824,-52.6054,0,41,7741,44,America/Sao_Paulo
+4118105,Paranacity,-22.9297,-52.1549,0,41,7743,44,America/Sao_Paulo
+4118204,Paranaguá,-25.5161,-48.5225,0,41,7745,41,America/Sao_Paulo
+4118303,Paranapoema,-22.6412,-52.0905,0,41,7747,44,America/Sao_Paulo
+4118402,Paranavaí,-23.0816,-52.4617,0,41,7749,44,America/Sao_Paulo
+4118451,Pato Bragado,-24.6271,-54.2265,0,41,5533,45,America/Sao_Paulo
+4118501,Pato Branco,-26.2292,-52.6706,0,41,7751,46,America/Sao_Paulo
+4118600,Paula Freitas,-26.2105,-50.931,0,41,7753,42,America/Sao_Paulo
+4118709,Paulo Frontin,-26.0466,-50.8304,0,41,7755,42,America/Sao_Paulo
+4118808,Peabiru,-23.914,-52.3431,0,41,7757,44,America/Sao_Paulo
+4118857,Perobal,-23.8949,-53.4098,0,41,868,44,America/Sao_Paulo
+4118907,Pérola,-23.8039,-53.6834,0,41,7969,44,America/Sao_Paulo
+4119004,Pérola d'Oeste,-25.8278,-53.7433,0,41,7759,46,America/Sao_Paulo
+4119103,Piên,-26.0965,-49.4336,0,41,7761,41,America/Sao_Paulo
+4119152,Pinhais,-25.4429,-49.1927,0,41,5453,41,America/Sao_Paulo
+4119251,Pinhal de São Bento,-26.0324,-53.482,0,41,5495,46,America/Sao_Paulo
+4119202,Pinhalão,-23.7982,-50.0536,0,41,7763,43,America/Sao_Paulo
+4119301,Pinhão,-25.6944,-51.6536,0,41,7765,42,America/Sao_Paulo
+4119400,Piraí do Sul,-24.5306,-49.9433,0,41,7767,42,America/Sao_Paulo
+4119509,Piraquara,-25.4422,-49.0624,0,41,7769,41,America/Sao_Paulo
+4119608,Pitanga,-24.7588,-51.7596,0,41,7771,42,America/Sao_Paulo
+4119657,Pitangueiras,-23.2281,-51.5873,0,41,5461,43,America/Sao_Paulo
+4119707,Planaltina do Paraná,-23.0101,-52.9162,0,41,7773,44,America/Sao_Paulo
+4119806,Planalto,-25.7211,-53.7642,0,41,7775,46,America/Sao_Paulo
+4119905,Ponta Grossa,-25.0916,-50.1668,0,41,7777,42,America/Sao_Paulo
+4119954,Pontal do Paraná,-25.6735,-48.5111,0,41,870,41,America/Sao_Paulo
+4120002,Porecatu,-22.7537,-51.3795,0,41,7779,43,America/Sao_Paulo
+4120101,Porto Amazonas,-25.54,-49.8946,0,41,7781,42,America/Sao_Paulo
+4120150,Porto Barreiro,-25.5477,-52.4067,0,41,872,42,America/Sao_Paulo
+4120200,Porto Rico,-22.7747,-53.2677,0,41,7783,44,America/Sao_Paulo
+4120309,Porto Vitória,-26.1674,-51.231,0,41,7785,42,America/Sao_Paulo
+4120333,Prado Ferreira,-23.0357,-51.4429,0,41,874,43,America/Sao_Paulo
+4120358,Pranchita,-26.0209,-53.7397,0,41,7991,46,America/Sao_Paulo
+4120408,Presidente Castelo Branco,-23.2782,-52.1536,0,41,7787,44,America/Sao_Paulo
+4120507,Primeiro de Maio,-22.8517,-51.0293,0,41,7789,43,America/Sao_Paulo
+4120606,Prudentópolis,-25.2111,-50.9754,0,41,7791,42,America/Sao_Paulo
+4120655,Quarto Centenário,-24.2775,-53.0759,0,41,876,44,America/Sao_Paulo
+4120705,Quatiguá,-23.5671,-49.916,0,41,7793,43,America/Sao_Paulo
+4120804,Quatro Barras,-25.3673,-49.0763,0,41,7795,41,America/Sao_Paulo
+4120853,Quatro Pontes,-24.5752,-53.9759,0,41,5535,45,America/Sao_Paulo
+4120903,Quedas do Iguaçu,-25.4492,-52.9102,0,41,7955,46,America/Sao_Paulo
+4121000,Querência do Norte,-23.0838,-53.483,0,41,7797,44,America/Sao_Paulo
+4121109,Quinta do Sol,-23.8533,-52.1309,0,41,7799,44,America/Sao_Paulo
+4121208,Quitandinha,-25.8734,-49.4973,0,41,7801,41,America/Sao_Paulo
+4121257,Ramilândia,-25.1195,-54.023,0,41,5527,45,America/Sao_Paulo
+4121307,Rancho Alegre,-23.0676,-50.9145,0,41,7803,43,America/Sao_Paulo
+4121356,Rancho Alegre D'Oeste,-24.3065,-52.9552,0,41,5513,44,America/Sao_Paulo
+4121406,Realeza,-25.7711,-53.526,0,41,7805,46,America/Sao_Paulo
+4121505,Rebouças,-25.6232,-50.6877,0,41,7807,42,America/Sao_Paulo
+4121604,Renascença,-26.1588,-52.9703,0,41,7809,46,America/Sao_Paulo
+4121703,Reserva,-24.6492,-50.8466,0,41,7811,42,America/Sao_Paulo
+4121752,Reserva do Iguaçu,-25.8319,-52.0272,0,41,878,42,America/Sao_Paulo
+4121802,Ribeirão Claro,-23.1941,-49.7597,0,41,7813,43,America/Sao_Paulo
+4121901,Ribeirão do Pinhal,-23.4091,-50.3601,0,41,7815,43,America/Sao_Paulo
+4122008,Rio Azul,-25.7306,-50.7985,0,41,7817,42,America/Sao_Paulo
+4122107,Rio Bom,-23.7606,-51.4122,0,41,7819,43,America/Sao_Paulo
+4122156,Rio Bonito do Iguaçu,-25.4874,-52.5292,0,41,5481,42,America/Sao_Paulo
+4122172,Rio Branco do Ivaí,-24.3244,-51.3187,0,41,880,43,America/Sao_Paulo
+4122206,Rio Branco do Sul,-25.1892,-49.3115,0,41,7821,41,America/Sao_Paulo
+4122305,Rio Negro,-26.095,-49.7982,0,41,7823,47,America/Sao_Paulo
+4122404,Rolândia,-23.3101,-51.3659,0,41,7825,43,America/Sao_Paulo
+4122503,Roncador,-24.5958,-52.2716,0,41,7827,44,America/Sao_Paulo
+4122602,Rondon,-23.412,-52.7659,0,41,7829,44,America/Sao_Paulo
+4122651,Rosário do Ivaí,-24.2682,-51.272,0,41,8473,43,America/Sao_Paulo
+4122701,Sabáudia,-23.3155,-51.555,0,41,7831,43,America/Sao_Paulo
+4122800,Salgado Filho,-26.1777,-53.3631,0,41,7833,46,America/Sao_Paulo
+4122909,Salto do Itararé,-23.6074,-49.6354,0,41,7835,43,America/Sao_Paulo
+4123006,Salto do Lontra,-25.7813,-53.3135,0,41,7837,46,America/Sao_Paulo
+4123105,Santa Amélia,-23.2654,-50.4288,0,41,7839,43,America/Sao_Paulo
+4123204,Santa Cecília do Pavão,-23.5201,-50.7835,0,41,7841,43,America/Sao_Paulo
+4123303,Santa Cruz de Monte Castelo,-22.9582,-53.2949,0,41,7843,44,America/Sao_Paulo
+4123402,Santa Fé,-23.04,-51.808,0,41,7845,44,America/Sao_Paulo
+4123501,Santa Helena,-24.8585,-54.336,0,41,7971,45,America/Sao_Paulo
+4123600,Santa Inês,-22.6376,-51.9024,0,41,7847,44,America/Sao_Paulo
+4123709,Santa Isabel do Ivaí,-23.0025,-53.1989,0,41,7849,44,America/Sao_Paulo
+4123808,Santa Izabel do Oeste,-25.8217,-53.4801,0,41,7851,46,America/Sao_Paulo
+4123824,Santa Lúcia,-25.4104,-53.5638,0,41,5469,45,America/Sao_Paulo
+4123857,Santa Maria do Oeste,-24.9377,-51.8696,0,41,5505,42,America/Sao_Paulo
+4123907,Santa Mariana,-23.1465,-50.5167,0,41,7853,43,America/Sao_Paulo
+4123956,Santa Mônica,-23.108,-53.1103,0,41,5519,44,America/Sao_Paulo
+4124020,Santa Tereza do Oeste,-25.0543,-53.6274,0,41,9969,45,America/Sao_Paulo
+4124053,Santa Terezinha de Itaipu,-25.4391,-54.402,0,41,8467,45,America/Sao_Paulo
+4124004,Santana do Itararé,-23.7587,-49.6293,0,41,7855,43,America/Sao_Paulo
+4124103,Santo Antônio da Platina,-23.2959,-50.0815,0,41,7859,43,America/Sao_Paulo
+4124202,Santo Antônio do Caiuá,-22.7351,-52.344,0,41,7861,44,America/Sao_Paulo
+4124301,Santo Antônio do Paraíso,-23.4969,-50.6455,0,41,7863,43,America/Sao_Paulo
+4124400,Santo Antônio do Sudoeste,-26.0737,-53.7251,0,41,7857,46,America/Sao_Paulo
+4124509,Santo Inácio,-22.6957,-51.7969,0,41,7865,44,America/Sao_Paulo
+4124608,São Carlos do Ivaí,-23.3158,-52.4761,0,41,7867,44,America/Sao_Paulo
+4124707,São Jerônimo da Serra,-23.7218,-50.7475,0,41,7869,43,America/Sao_Paulo
+4124806,São João,-25.8214,-52.7252,0,41,7871,46,America/Sao_Paulo
+4124905,São João do Caiuá,-22.8535,-52.3411,0,41,7873,44,America/Sao_Paulo
+4125001,São João do Ivaí,-23.9833,-51.8215,0,41,7875,43,America/Sao_Paulo
+4125100,São João do Triunfo,-25.683,-50.2949,0,41,7877,42,America/Sao_Paulo
+4125209,São Jorge d'Oeste,-25.7085,-52.9204,0,41,7881,46,America/Sao_Paulo
+4125308,São Jorge do Ivaí,-23.4336,-52.2929,0,41,7879,44,America/Sao_Paulo
+4125357,São Jorge do Patrocínio,-23.7647,-53.8823,0,41,7999,44,America/Sao_Paulo
+4125407,São José da Boa Vista,-23.9122,-49.6577,0,41,7883,43,America/Sao_Paulo
+4125456,São José das Palmeiras,-24.8369,-54.0572,0,41,8471,45,America/Sao_Paulo
+4125506,São José dos Pinhais,-25.5313,-49.2031,0,41,7885,41,America/Sao_Paulo
+4125555,São Manoel do Paraná,-23.3941,-52.6454,0,41,5515,44,America/Sao_Paulo
+4125605,São Mateus do Sul,-25.8677,-50.384,0,41,7887,42,America/Sao_Paulo
+4125704,São Miguel do Iguaçu,-25.3492,-54.2405,0,41,7889,45,America/Sao_Paulo
+4125753,São Pedro do Iguaçu,-24.9373,-53.8521,0,41,5489,45,America/Sao_Paulo
+4125803,São Pedro do Ivaí,-23.8634,-51.8568,0,41,7891,43,America/Sao_Paulo
+4125902,São Pedro do Paraná,-22.8239,-53.2241,0,41,7893,44,America/Sao_Paulo
+4126009,São Sebastião da Amoreira,-23.4656,-50.7625,0,41,7895,43,America/Sao_Paulo
+4126108,São Tomé,-23.5349,-52.5901,0,41,7897,44,America/Sao_Paulo
+4126207,Sapopema,-23.9078,-50.5801,0,41,7899,43,America/Sao_Paulo
+4126256,Sarandi,-23.4441,-51.876,0,41,8461,44,America/Sao_Paulo
+4126272,Saudade do Iguaçu,-25.6917,-52.6184,0,41,5493,46,America/Sao_Paulo
+4126306,Sengés,-24.1129,-49.4616,0,41,7901,43,America/Sao_Paulo
+4126355,Serranópolis do Iguaçu,-25.3799,-54.0518,0,41,882,45,America/Sao_Paulo
+4126405,Sertaneja,-23.0361,-50.8317,0,41,7903,43,America/Sao_Paulo
+4126504,Sertanópolis,-23.0571,-51.0399,0,41,7905,43,America/Sao_Paulo
+4126603,Siqueira Campos,-23.6875,-49.8304,0,41,7907,43,America/Sao_Paulo
+4126652,Sulina,-25.7066,-52.7299,0,41,8477,46,America/Sao_Paulo
+4126678,Tamarana,-23.7204,-51.0991,0,41,884,43,America/Sao_Paulo
+4126702,Tamboara,-23.2036,-52.4743,0,41,7909,44,America/Sao_Paulo
+4126801,Tapejara,-23.7315,-52.8735,0,41,7911,44,America/Sao_Paulo
+4126900,Tapira,-23.3193,-53.0684,0,41,7973,44,America/Sao_Paulo
+4127007,Teixeira Soares,-25.3701,-50.4571,0,41,7913,42,America/Sao_Paulo
+4127106,Telêmaco Borba,-24.3245,-50.6176,0,41,7915,42,America/Sao_Paulo
+4127205,Terra Boa,-23.7683,-52.447,0,41,7917,44,America/Sao_Paulo
+4127304,Terra Rica,-22.7111,-52.6188,0,41,7919,44,America/Sao_Paulo
+4127403,Terra Roxa,-24.1575,-54.0988,0,41,7921,44,America/Sao_Paulo
+4127502,Tibagi,-24.5153,-50.4176,0,41,7923,42,America/Sao_Paulo
+4127601,Tijucas do Sul,-25.9311,-49.195,0,41,7925,41,America/Sao_Paulo
+4127700,Toledo,-24.7246,-53.7412,0,41,7927,45,America/Sao_Paulo
+4127809,Tomazina,-23.7796,-49.9499,0,41,7929,43,America/Sao_Paulo
+4127858,Três Barras do Paraná,-25.4185,-53.1833,0,41,7987,45,America/Sao_Paulo
+4127882,Tunas do Paraná,-24.9731,-49.0879,0,41,5455,41,America/Sao_Paulo
+4127908,Tuneiras do Oeste,-23.8648,-52.8769,0,41,7931,44,America/Sao_Paulo
+4127957,Tupãssi,-24.5879,-53.5105,0,41,7993,44,America/Sao_Paulo
+4127965,Turvo,-25.0437,-51.5282,0,41,8453,42,America/Sao_Paulo
+4128005,Ubiratã,-24.5393,-52.9865,0,41,7933,44,America/Sao_Paulo
+4128104,Umuarama,-23.7656,-53.3201,0,41,7935,44,America/Sao_Paulo
+4128203,União da Vitória,-26.2273,-51.0873,0,41,7937,42,America/Sao_Paulo
+4128302,Uniflor,-23.0868,-52.1573,0,41,7939,44,America/Sao_Paulo
+4128401,Uraí,-23.2,-50.7939,0,41,7941,43,America/Sao_Paulo
+4128534,Ventania,-24.2458,-50.2376,0,41,5497,42,America/Sao_Paulo
+4128559,Vera Cruz do Oeste,-25.0577,-53.8771,0,41,7989,45,America/Sao_Paulo
+4128609,Verê,-25.8772,-52.9051,0,41,7945,46,America/Sao_Paulo
+4128658,Virmond,-25.3829,-52.1987,0,41,5483,42,America/Sao_Paulo
+4128708,Vitorino,-26.2683,-52.7843,0,41,7947,46,America/Sao_Paulo
+4128500,Wenceslau Braz,-23.8742,-49.8032,0,41,7943,43,America/Sao_Paulo
+4128807,Xambrê,-23.7364,-53.4884,0,41,7949,44,America/Sao_Paulo

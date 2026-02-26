@@ -1,0 +1,11 @@
+services:
+  worker:
+    image: custom-worker:3.6.13-python3.12
+    build:
+      context: ..                       
+      dockerfile: worker/Dockerfile
+    restart: always
+    volumes:
+      - ../:/app
+    environment:
+      - PYTHONPATH=/app:/app/tasks_python

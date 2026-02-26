@@ -1,0 +1,10 @@
+logs
+__pycache__
+ultimo_indice.txt
+venv
+lojas_parciais.csv
+notas_parciais.csv
+COLUNAS CALCULADAS COMPARADOR DE PR.txt
+MP_Feeder.py
+deploy.ps1
+env.py
