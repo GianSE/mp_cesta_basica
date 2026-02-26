@@ -1,16 +1,14 @@
+from datetime import datetime
 import polars as pl
 import requests
 import time
 import os
 import io
-from datetime import datetime
 from azure.storage.blob import BlobServiceClient 
-from dotenv import load_dotenv  # Adicione isso
+from dotenv import load_dotenv
 
-# Carrega as variáveis do arquivo .env (se ele existir)
 load_dotenv() 
 
-# Agora o os.getenv vai funcionar tanto no seu PC quanto no GitHub
 AZURE_CONNECTION_STRING = os.getenv("AZURE_CONNECTION_STRING")
 AZURE_CONTAINER = "bronze" 
 
@@ -21,25 +19,16 @@ ARQUIVO_GEOHASHES = os.path.join(RAIZ_PROJETO, "dados", "municipios_pr_geohash.c
 API_URL = "https://menorpreco.notaparana.pr.gov.br/api/v1/produtos"
 
 def testar_conexao_azure():
-    """Testa se a credencial é válida e se o container existe antes de rodar a extração."""
     print("☁️  Testando conexão com a Azure Blob Storage...", flush=True)
     try:
         blob_service_client = BlobServiceClient.from_connection_string(AZURE_CONNECTION_STRING)
         container_client = blob_service_client.get_container_client(AZURE_CONTAINER)
-        
-        if not container_client.exists():
-            print(f"❌ Erro Crítico: O container '{AZURE_CONTAINER}' NÃO FOI ENCONTRADO na sua Storage Account.", flush=True)
-            print("Crie o container na Azure antes de rodar o script.", flush=True)
-            return False
-            
-        print("✅ Conexão com a Azure estabelecida com sucesso! Container validado.\n", flush=True)
+        if not container_client.exists(): return False
+        print("✅ Conexão Azure OK!\n", flush=True)
         return True
-    except Exception as e:
-        print(f"❌ Erro de Autenticação na Azure: {e}", flush=True)
-        return False
+    except: return False
 
 def gerar_variacoes(categoria, termo):
-    """Gera variações inteligentes de pesos e volumes."""
     variacoes = [] 
     if categoria == "Grãos E Básicos":
         variacoes.extend([f"{termo} 1KG", f"{termo} 5KG", f"{termo} 500G"])
@@ -68,107 +57,131 @@ def gerar_variacoes(categoria, termo):
     return variacoes
 
 def main():
-    print("🚀 Iniciando Pipeline Bronze (Destino: AZURE CLOUD)", flush=True)
-    print("=" * 50, flush=True)
+    agora = datetime.now()
+    dia_da_semana = agora.weekday() 
     
-    # 0. Teste de Conexão Fail-Fast
-    if not testar_conexao_azure():
-        return # Aborta o script se a Azure não responder
+    print(f"🚀 Iniciando Pipeline Bronze - Fatiamento Dia {dia_da_semana + 1}/7", flush=True)
     
-    # 1. Preparação
+    if not testar_conexao_azure(): return 
+
     df_referencia = pl.read_csv(ARQUIVO_TERMOS)
     linhas_referencia = df_referencia.to_dicts()
-    total_termos = len(linhas_referencia) 
+    total_produtos_lista = len(linhas_referencia)
     
     df_geos = pl.read_csv(ARQUIVO_GEOHASHES)
-    cidades_principais = ["Curitiba", "Londrina", "Maringá", "Cascavel", "Ponta Grossa", "Foz do Iguaçu", "São José dos Pinhais"]
-    df_polos = df_geos.filter(pl.col("nome").is_in(cidades_principais))
+    tamanho_fatia = 57
+    inicio = dia_da_semana * tamanho_fatia
     
-    if df_polos.height == 0:
-        print("❌ Erro nas cidades principais.", flush=True)
-        return
+    df_lote = df_geos.slice(inicio, tamanho_fatia) if dia_da_semana < 6 else df_geos.slice(inicio)
+    lista_cidades = df_lote.select(["nome", "geohash"]).to_dicts()
+    
+    print(f"📅 Hoje é {agora.strftime('%A')}. Processando {len(lista_cidades)} cidades.", flush=True)
 
-    lista_polos = df_polos.select(["nome", "geohash"]).to_dicts()
     todas_as_notas = []
 
-    # 2. Coleta
-    for polo in lista_polos: 
-        cidade_nome = polo["nome"]
-        geohash = polo["geohash"]
-        
-        print(f"\n🏙️ Região: {cidade_nome} (Geohash: {geohash})", flush=True)
-        print("=" * 40, flush=True)
-        
-        for i, linha in enumerate(linhas_referencia, 1):
-            categoria = linha.get("categoria", "Geral")
-            termo_base = linha["descricao_busca"]
-            variacoes = gerar_variacoes(categoria, termo_base)
-            total_notas_base = 0
+
+    # 3. Coleta Massiva
+    try:
+        for idx_cid, polo in enumerate(lista_cidades, 1): 
+            cidade_nome = polo["nome"]
+            geohash = polo["geohash"]
+            print(f"\n🏙️  [{idx_cid}/{len(lista_cidades)}] Região: {cidade_nome}", flush=True)
             
-            print(f"🔍 [{i}/{total_termos}] {termo_base}...", end=" ", flush=True)
-            
-            for busca in variacoes:
-                offset = 0
-                while offset < 5000:
-                    params = {"termo": busca, "local": geohash, "raio": "20", "offset": offset}
+            for i, linha in enumerate(linhas_referencia, 1):
+                termo_base = linha["descricao_busca"]
+                variacoes = gerar_variacoes(linha.get("categoria", "Geral"), termo_base)
+                notas_termo = 0
+                
+                print(f"  🔍 [{i}/{total_produtos_lista}] {termo_base}...", end=" ", flush=True)
+                
+                for busca in variacoes:
+                    offset = 0
+                    continua_variacao = True # Controle para saber se desistimos da variação atual
                     
-                    try:
-                        r = requests.get(API_URL, params=params, timeout=15)
-                        if r.status_code == 200:
-                            dados = r.json().get("produtos", [])
-                            if not dados: break
-                            
-                            for d in dados:
-                                d['termo_origem'] = termo_base 
-                                d['termo_buscado'] = busca
-                                d['geohash_origem'] = geohash
-                                d['cidade_origem'] = cidade_nome 
-                            
-                            todas_as_notas.extend(dados)
-                            total_notas_base += len(dados)
-                            
-                            if len(dados) < 50: break
-                            offset += 50
-                            time.sleep(0.1) 
-                        else: break
-                    except: break
-            
-            print(f"✅ {total_notas_base} notas", flush=True)
+                    while offset < 500 and continua_variacao:
+                        params = {"termo": busca, "local": geohash, "raio": "20", "offset": offset}
+                        
+                        # --- LÓGICA DE 5 RETRIES SEGUIDOS ---
+                        sucesso_chamada = False
+                        for tentativa in range(1, 6): # Tenta até 5 vezes seguidas
+                            try:
+                                r = requests.get(API_URL, params=params, timeout=20) # Timeout de 20s
+                                
+                                if r.status_code == 200:
+                                    dados = r.json().get("produtos", [])
+                                    if not dados:
+                                        sucesso_chamada = True
+                                        continua_variacao = False # Não tem mais páginas
+                                        break
+                                    
+                                    for d in dados:
+                                        d['termo_origem'] = termo_base 
+                                        d['cidade_origem'] = cidade_nome 
+                                        d['geohash_origem'] = geohash
+                                    
+                                    todas_as_notas.extend(dados)
+                                    notas_termo += len(dados)
+                                    
+                                    if len(dados) < 50: 
+                                        continua_variacao = False
+                                    else:
+                                        offset += 50
+                                    
+                                    sucesso_chamada = True
+                                    time.sleep(0.05)
+                                    break # Sucesso! Sai do loop de retry e continua o while
+                                
+                                else:
+                                    # Erro de status (ex: 500, 502, 503)
+                                    print(f"(Erro {r.status_code} na tent. {tentativa})", end=" ", flush=True)
+                                    time.sleep(2 * tentativa) # Espera progressiva
+                                    
+                            except requests.exceptions.RequestException as e:
+                                # Erro de conexão ou timeout
+                                if tentativa == 5:
+                                    print(f"⚠️ Falha definitiva após 5 erros seguidos no termo '{busca}'.", end=" ", flush=True)
+                                    continua_variacao = False # Desiste dessa variação
+                                    break
+                                time.sleep(3 * tentativa) 
+                        
+                        if not sucesso_chamada: 
+                            break # Se as 5 tentativas falharam, sai do while desse produto
+                
+                print(f"✅ {notas_termo} notas", flush=True)
+
+    except KeyboardInterrupt:
+        print("\n\n🛑 Interrupção manual (Ctrl+C). Salvando progresso...")
+        
+        print(f"Salvando o que foi coletado até agora ({len(todas_as_notas)} notas)...")
 
     if not todas_as_notas:
-        print("\n⚠️ Nada coletado.", flush=True)
+        print("\n⚠️ Nada coletado hoje.", flush=True)
         return
 
-    # 3. Processamento
-    print("\n🛠️ Processando e deduplicando...", flush=True)
+    # 4. Processamento e Upload
+    print("\n🛠️ Deduplicando e preparando upload...", flush=True)
     df = pl.from_dicts(todas_as_notas)
-    if "estabelecimento" in df.columns:
-        df = df.unnest("estabelecimento")
-    
-    total_bruto = df.height
+    if "estabelecimento" in df.columns: df = df.unnest("estabelecimento")
     df = df.unique(subset=["id"])
-    total_unico = df.height
 
-    print(f"📊 RESUMO: Bruto {total_bruto} | Único {total_unico}")
-
-    # 4. UPLOAD PARA A AZURE
     buffer = io.BytesIO()
     df.write_parquet(buffer, compression="zstd")
     
-    agora = datetime.now()
-    caminho_blob = f"menor_preco/ano_hive={agora.year}/mes_hive={agora.month:02d}/dados_{agora.strftime('%H%M%S')}.parquet"
+    timestamp_arquivo = agora.strftime('%H%M')
+    caminho_blob = (
+        f"menor_preco/ano_hive={agora.year}/"
+        f"mes_hive={agora.month:02d}/"
+        f"dia_hive={agora.day:02d}/"
+        f"fatia_{dia_da_semana}_{timestamp_arquivo}.parquet"
+    )
     
-    print("\n📤 Iniciando upload para a Azure Blob Storage...", flush=True)
     try:
         blob_service_client = BlobServiceClient.from_connection_string(AZURE_CONNECTION_STRING)
         blob_client = blob_service_client.get_blob_client(container=AZURE_CONTAINER, blob=caminho_blob)
-        
         blob_client.upload_blob(buffer.getvalue(), overwrite=True)
-        
-        print(f"📦 Sucesso absoluto! Parquet salvo na nuvem:", flush=True)
-        print(f"   URL Lógica: azure://{AZURE_CONTAINER}/{caminho_blob}", flush=True)
+        print(f"\n📦 Sucesso! Arquivo salvo em: {caminho_blob}", flush=True)
     except Exception as e:
-        print(f"❌ Erro fatal no momento do upload: {e}", flush=True)
+        print(f"❌ Erro upload: {e}", flush=True)
 
 if __name__ == "__main__":
     main()
