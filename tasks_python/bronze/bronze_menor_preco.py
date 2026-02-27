@@ -86,19 +86,101 @@ def enviar_alerta_telegram(mensagem):
 
 def gerar_variacoes(categoria, termo):
     variacoes = [] 
-    if categoria == "Grãos E Básicos": variacoes.extend([f"{termo} 1KG", f"{termo} 5KG", f"{termo} 500G"])
+    
+    # --- Grãos ---
+    if categoria == "Grãos E Básicos": 
+        if "ARROZ BRANCO" in termo: 
+            variacoes.extend(["ARROZ TIPO 1 5KG", "ARROZ T1 5KG", "ARROZ 5KG"])
+        elif "ARROZ PARBOILIZADO" in termo:
+            variacoes.extend(["ARROZ PARBOILIZADO 5KG", "ARROZ PARB 5KG"])
+        elif "FEIJAO" in termo: 
+            variacoes.extend([f"{termo} 1KG", termo])
+        else: 
+            variacoes.extend([f"{termo} 1KG", termo])
+
+    # --- Farinhas e Milho ---
+    elif categoria == "Farinhas E Milho": 
+        if "FARINHA DE" in termo:
+            # Pulo do gato: "FARINHA DE TRIGO" -> "FAR TRIGO" ou "FARINHA TRIGO"
+            base = termo.replace("FARINHA DE ", "")
+            variacoes.extend([f"FAR {base} 1KG", f"FARINHA {base} 1KG", f"{termo} 1KG"])
+        else:
+            variacoes.extend([f"{termo} 1KG", f"{termo} 500G"])
+
+    # --- Óleos e Gorduras ---
     elif categoria == "Óleos E Gorduras":
-        if "MARGARINA" in termo or "MANTEIGA" in termo or "BANHA" in termo: variacoes.extend([f"{termo} 500G", f"{termo} 250G", termo])
-        elif "AZEITE" in termo: variacoes.extend([f"{termo} 500ML", f"{termo} 250ML", termo])
-        else: variacoes.extend([f"{termo} 900ML", termo])
-    elif categoria in ["Farinhas E Milho", "Padaria E Biscoitos", "Massas"]: variacoes.extend([f"{termo} 500G", f"{termo} 1KG", f"{termo} 400G", f"{termo} 200G"])
+        if "OLEO" in termo: 
+            variacoes.extend([f"{termo} 900ML", termo])
+        elif "AZEITE" in termo: 
+            variacoes.extend([f"{termo} 500ML"])
+        elif "MARGARINA" in termo:
+            # Cupom fiscal adora abreviar margarina
+            variacoes.extend(["MARGARINA 500G", "MARG 500G", termo])
+        else: 
+            variacoes.extend([f"{termo} 500G", termo])
+
+    # --- Café e Leite ---
     elif categoria == "Café E Leite":
-        if "CAFE" in termo: variacoes.extend([f"{termo} 500G", f"{termo} 250G"])
-        elif "LEITE" in termo and "PO" not in termo: variacoes.extend([f"{termo} 1L"])
-        else: variacoes.append(termo)
-    elif categoria == "Limpeza": variacoes.extend([f"{termo} 1KG", f"{termo} 500ML", f"{termo} 1L", f"{termo} 2L", f"{termo} 5L"])
-    elif categoria == "Bebidas": variacoes.extend([f"{termo} 2L", f"{termo} 1.5L", f"{termo} 1L", f"{termo} 350ML", f"{termo} 500ML"])
-    else: variacoes.append(termo)
+        if "CAFE" in termo:
+            # Tira o "MOIDO" que quase ninguém usa na nota
+            variacoes.extend(["CAFE 500G", "CAFE TORRADO 500G", f"{termo} 500G"])
+        elif "LEITE INTEGRAL" in termo:
+            # Adiciona o UHT que os mercados grandes usam
+            variacoes.extend(["LEITE UHT INTEGRAL 1L", "LEITE INTEGRAL 1L", "LEITE 1L"])
+        elif "LEITE EM PO" in termo:
+            variacoes.extend(["LEITE PO 400G", f"{termo} 400G"])
+        else:
+            variacoes.append(termo)
+
+    # --- Limpeza ---
+    elif categoria == "Limpeza": 
+        if "SABAO EM PO" in termo: 
+            # Foca na embalagem de 800g que é o padrão atual do mercado
+            variacoes.extend(["LAVA ROUPAS 800G", "SABAO PO 800G", "SABAO EM PO 800G"])
+        elif "DETERGENTE LIQUIDO" in termo: 
+            # Arranca o "liquido" que atrapalha a busca
+            variacoes.extend(["DETERGENTE 500ML"])
+        elif "DESINFETANTE" in termo or "AMACIANTE" in termo: 
+            variacoes.extend([f"{termo} 2L", f"{termo} 1L"])
+        elif "SACO LIXO" in termo: 
+            variacoes.extend([f"{termo} 50L", f"{termo} 30L", termo])
+        else: 
+            variacoes.append(termo)
+
+    # --- Higiene ---
+    elif categoria == "Higiene":
+        if "CREME DENTAL" in termo:
+            variacoes.extend(["CREME DENTAL 90G", "PASTA DENTAL 90G", termo])
+        elif "PAPEL HIGIENICO" in termo:
+            # Mercados usam a quantidade de rolos ou metragem
+            variacoes.extend(["PAPEL HIGIENICO 4", "PAPEL HIGIENICO 30M", termo])
+        elif "SABONETE" in termo:
+            variacoes.extend(["SABONETE 90G", "SABONETE 85G", termo])
+        else:
+            variacoes.append(termo)
+
+    # --- Biscoitos e Massas ---
+    elif categoria in ["Padaria E Biscoitos", "Massas"]: 
+        if "MACARRAO" in termo: 
+            # MACARRAO ESPAGUETE -> MAC ESPAGUETE 500G
+            tipo = termo.replace("MACARRAO ", "")
+            variacoes.extend([f"MAC {tipo} 500G", f"{termo} 500G"])
+        elif "PAO" in termo: 
+            variacoes.extend([f"{termo} 400G", f"{termo} 500G", termo])
+        elif "BISCOITO" in termo:
+            # Abreviação clássica
+            tipo = termo.replace("BISCOITO ", "")
+            variacoes.extend([f"BISC {tipo} 400G", f"BISC {tipo}", f"{termo} 400G"])
+        else: 
+            variacoes.extend([f"{termo} 400G", f"{termo} 200G", termo])
+
+    # --- O Resto (Proteínas Frescas, Enlatados, Bebidas, etc) ---
+    else: 
+        if "OVOS" in termo:
+            variacoes.extend(["OVO BRANCO", "OVOS DUZIA", termo])
+        else:
+            variacoes.append(termo)
+            
     return variacoes
 
 def processar_e_salvar_lote(dados_lote, dia_da_semana, numero_lote):
@@ -251,31 +333,53 @@ def main():
     todas_as_notas = []
     
     # Variáveis de controle de lote
-    TAMANHO_DO_LOTE = 1000
+    TAMANHO_DO_LOTE = 2000
     numero_lote = 1
+    
+    # Descobre quantos produtos tem por cidade para fazer o [1/95]
+    buscas_por_cidade = len(tarefas) // len(lista_cidades)
     
     # 2. Execução Paralela
     with requests.Session() as sessao:
-        # Passando o max_workers direto
         executor = ThreadPoolExecutor(max_workers=5)
-        futuros = {
-            executor.submit(extrair_dados_variacao, sessao, t[0], t[1], t[2], t[3]): t 
-            for t in tarefas
-        }
         
+        # Envia todas as tarefas para a fila e guarda a ordem exata delas
+        futuros_em_ordem = []
+        for t in tarefas:
+            futuro = executor.submit(extrair_dados_variacao, sessao, t[0], t[1], t[2], t[3])
+            futuros_em_ordem.append((t, futuro))
+            
         try:
             tarefas_concluidas = 0
-            for futuro in as_completed(futuros):
+            cidade_atual = ""
+            cidade_idx = 0
+            busca_idx = 1
+            
+            # Aqui está o truque: iteramos na ordem da lista, não na ordem de quem acaba primeiro
+            for tarefa_info, futuro in futuros_em_ordem:
+                busca_atual = tarefa_info[0]
+                nome_cidade = tarefa_info[3]
+                
+                # Se mudou a cidade, imprime o cabeçalho bonitão
+                if nome_cidade != cidade_atual:
+                    cidade_atual = nome_cidade
+                    cidade_idx += 1
+                    busca_idx = 1
+                    print(f"\n🏙️  [{cidade_idx}/{len(lista_cidades)}] Região: {cidade_atual}", flush=True)
+                
+                # futuro.result() bloqueia o loop até ESSA requisição específica terminar
                 resultado = futuro.result()
+                qtd_encontrada = len(resultado) if resultado else 0
+                
+                # Print na mesma linha, igualzinho ao original
+                print(f"  🔍 [{busca_idx}/{buscas_por_cidade}] {busca_atual}... ✅ {qtd_encontrada} notas", flush=True)
+
                 if resultado:
                     todas_as_notas.extend(resultado)
-                    total_notas_dia += len(resultado) # <--- SOMA AQUI!
-                
+                    total_notas_dia += len(resultado)
+                    
                 tarefas_concluidas += 1
-                
-                # Feedback visual menor a cada 50
-                if tarefas_concluidas % 50 == 0 or tarefas_concluidas == len(tarefas):
-                    print(f"🔄 Progresso: {tarefas_concluidas}/{len(tarefas)} buscas... Notas no buffer: {len(todas_as_notas)}", flush=True)
+                busca_idx += 1
 
                 # --- LÓGICA DE CHECKPOINT ---
                 if tarefas_concluidas % TAMANHO_DO_LOTE == 0:
@@ -283,7 +387,6 @@ def main():
                     sucesso_upload = processar_e_salvar_lote(todas_as_notas, dia_da_semana, numero_lote)
                     
                     if sucesso_upload:
-                        # Limpa a memória apenas se o upload deu certo
                         todas_as_notas.clear()
                         numero_lote += 1
                     else:
@@ -291,8 +394,7 @@ def main():
 
         except KeyboardInterrupt:
             print("\n\n🛑 Interrupção manual (Ctrl+C) detectada! Cancelando threads pendentes...")
-            evento_parada.set() # Aperta o botão de pânico
-            # Cancela tudo o que ainda não começou a rodar na fila
+            evento_parada.set() 
             executor.shutdown(wait=False, cancel_futures=True)
 
     # 3. Processamento Final (Resíduo)
@@ -323,7 +425,7 @@ def main():
 
     # Monta a mensagem formatada
     mensagem_telegram = f"""✅ *Extração Menor Preço concluída.*
-⏱️ tempo de processamento: {minutos_processamento} min
+⏱️ tempo: {minutos_processamento} min
 🧾 notas: {total_notas_dia}
 📍 geohashs: {len(lista_cidades)}
 🍰 fatia: {dia_da_semana + 1} ({nome_dia_atual})
