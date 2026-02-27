@@ -28,5 +28,7 @@ jobs:
         # Injeta a senha segura como variável de ambiente apenas durante a execução
         env:
           AZURE_CONNECTION_STRING: ${{ secrets.AZURE_CONNECTION_STRING }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           PYTHONUNBUFFERED: "1" # Isso aqui força o log em tempo real
-        run: python tasks_python/bronze/bronze_menor_preco_azure.py
+        run: python tasks_python/bronze/bronze_menor_preco.py
