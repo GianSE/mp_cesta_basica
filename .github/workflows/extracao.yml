@@ -1,4 +1,4 @@
-name: ETL Menor Preco Bronze (Azure)
+name: ELT Menor Preco Bronze (Azure)
 
 on:
   workflow_dispatch: # Permite rodar manualmente no botão
